@@ -1,7 +1,7 @@
 from Data_Handling import import_data
 
 
-Data = import_data()
+Data = import_data("Train.csv")
 f1 = open('hate_words.txt', 'a')
 f2 = open('love_words.txt', 'a')
 

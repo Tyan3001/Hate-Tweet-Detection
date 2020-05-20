@@ -6,13 +6,13 @@ from nltk.stem import PorterStemmer
 import string
 
 
-def import_data():
+def import_data(filename):
 
     neutral_words = ['user', "'s", '...', "n't", "'m", '``', "''", 'amp']
     def remove_punc(words) :
         return [w for w in words if w not in string.punctuation]
 
-    Data = pd.read_csv("Train.csv")
+    Data = pd.read_csv(filename)
 
     Data = Data.drop(['id'], axis = 1)
 
