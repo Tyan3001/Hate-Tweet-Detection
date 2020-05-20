@@ -5,12 +5,10 @@ from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 import string
 
-def import_data():
-    tk.download('stopwords')
-    tk.download('punkt')
-    tk.download('wordnet')
 
-    neutral_words = ['user', "'s", '...', "n't", "'m", '``', "''"]
+def import_data():
+
+    neutral_words = ['user', "'s", '...', "n't", "'m", '``', "''", 'amp']
     def remove_punc(words) :
         return [w for w in words if w not in string.punctuation]
 
